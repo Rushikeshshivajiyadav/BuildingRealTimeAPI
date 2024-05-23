@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "d7208ece-4e14-43db-bf84-86a5dae535c6",
+		"name": "BuildingRealTimeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30542208"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "createPost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1OTgxMzYsImV4cCI6MTcwNzIwMjkzNn0.S4W70zMKNzWyP-MghBYe-f-sfNhroS_WClCLKMyGcwGRSNWFFsjkwY3fysPKPqE0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n     \"title\": \"My New Post 8\",\r\n     \"description\": \"Post Description 8\",\r\n     \"content\": \"This is my new Post 8\",\r\n     \"categoryId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosts",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "abhi",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "abhi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts?pageNo=0&pageSize20&sortBy=content&sortDir=asc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "0"
+								},
+								{
+									"key": "pageSize20",
+									"value": null
+								},
+								{
+									"key": "sortBy",
+									"value": "content"
+								},
+								{
+									"key": "sortDir",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosts Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/posts/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostById V2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY2MDkyNDEsImV4cCI6MTcwNzIxNDA0MX0.clx1butBzdXTai3VzYadx6PwX24l1ysqNZKs5Ij5vyWhTAILnzKsnWpCsKjGdP8n",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v2/posts/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MjE0NzEsImV4cCI6MTcwNzEyNjI3MX0.afGWW4iDdPiE2IdYX_3wuwGzOlTeNRpXuJmX7FKXnfIVR5w5lg8vxPyW6ZC3NB8P",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n     \"title\": \"My New Post 7\",\r\n     \"description\": \"Post Description 7\",\r\n     \"content\": \"This is my new Post 7\",\r\n     \"categoryId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY0MjUxOTYsImV4cCI6MTcwNzAyOTk5Nn0.-_25-tV0ZXzsDxh7Cjoz8ly8uXrul7zy7AGmwixbCh03XF1AmSE5HPRSi5oL_-pN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostsByCategoryID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MjI2NjMsImV4cCI6MTcwNzEyNzQ2M30.Tp2S58mS2sWOW2SQgYUL7WZ1B88-nWh76kPQLA2S0rek7IEjH-ex7-PXtAkL99t_",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/category/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "createComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\":\"Rushikesh Yadav\",\r\n    \"email\":\"rushikeshyadav@gmail.com\",\r\n    \"body\":\"Social Media Intructor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts/1/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCommentByPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/1/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/1/comments/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"name\": \"Rushikesh Yadav\",\r\n    \"email\": \"rushikeshyadav827@gmail.com\",\r\n    \"body\": \"Very Informative Post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts/1/comments/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/posts/1/comments/\"10\"",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments",
+								"\"10\""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernameOrEmail\":\"rushi\",\r\n    \"password\": \"rushi\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"kiran\",\r\n    \"username\": \"kiran\",\r\n    \"email\": \"kirannavgare@gmail.com\",\r\n    \"password\":\"kiran\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "createCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MDk2NDksImV4cCI6MTcwNzExNDQ0OX0.zp4h_5QERnjOPfViOKFb1OhtMPevLSodibIpYa-8dOIdLCG7b65RJaZr1_gxJJ4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Java EE\",\r\n    \"description\" : \"this is Java EE Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MTM3MDksImV4cCI6MTcwNzExODUwOX0.oJ0x-rubkRIfVCLPiLohCO5SrQn5l9-RpLlrF69quwSQFFQ6RVuelKMvOAPTxQAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n    \"name\": \"Java EE\",\r\n    \"description\": \"this is Java EE Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/category/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MDk2NDksImV4cCI6MTcwNzExNDQ0OX0.zp4h_5QERnjOPfViOKFb1OhtMPevLSodibIpYa-8dOIdLCG7b65RJaZr1_gxJJ4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCatogory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJydXNoaWtlc2h5YWRhdkBnbWFpbC5jb20iLCJpYXQiOjE3MDY1MTk1MDMsImV4cCI6MTcwNzEyNDMwM30.f8W1PFDvrk2UlGhOL3kG_T8pabp6h2l-CQtlNX3lAmvD4KCmaQafbFEFt9xd0DZ2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/category/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SpringDoc",
+			"item": [
+				{
+					"name": "Swagger-ui-Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/swagger-ui/index.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"swagger-ui",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API-docs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v3/api-docs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v3",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
