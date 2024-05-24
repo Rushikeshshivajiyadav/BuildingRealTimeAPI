@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d7208ece-4e14-43db-bf84-86a5dae535c6",
+		"_postman_id": "ee3a3fbb-4302-46f8-9678-e7f4b08911af",
 		"name": "BuildingRealTimeAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30542208"
+		"_exporter_id": "33989748"
 	},
 	"item": [
 		{
@@ -46,7 +46,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllPosts",
+					"name": "getAllPostsWithParam",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -96,7 +96,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllPosts Copy",
+					"name": "getAllPosts",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -634,6 +634,16 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/"
+		},
+		{
+			"key": "http://loaclhost:8080/api/",
+			"value": "}"
 		}
 	]
 }
